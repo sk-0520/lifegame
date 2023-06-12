@@ -1,13 +1,15 @@
 /// 外周の扱い
-enum Outer {
+#[derive(Debug)]
+pub enum Outer {
     Reverse,
     Dead,
     Live,
 }
 
 /// 設定
-struct Setting {
-    width: u32,
-    height: u32,
-    outer: Outer,
+#[derive(Debug)]
+pub struct Setting {
+    pub width: u32,
+    pub height: u32,
+    pub outer: Outer,
 }

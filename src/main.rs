@@ -1,3 +1,12 @@
+mod setting;
+
+use crate::setting::Setting;
+
 fn main() {
-    println!("Hello, world!");
+    let setting = Setting {
+        width: 16,
+        height: 16,
+        outer: setting::Outer::Reverse,
+    };
+    println!("{:?}", setting);
 }
