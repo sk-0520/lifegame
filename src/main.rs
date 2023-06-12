@@ -1,6 +1,6 @@
 mod setting;
 
-use crate::setting::Setting;
+use setting::Setting;
 
 fn main() {
     let setting = Setting {
