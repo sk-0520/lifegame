@@ -2,7 +2,7 @@
 
 お勉強用。
 
-最終的にはライフゲームでも作ろうと思っているけどとりま Rust に慣れるところが目的。
+最終的にはローカルHTMLヘルプ出力でも作ろうと思っているけどとりま Rust に慣れるところが目的。
 
 ---
 
@@ -18,15 +18,15 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug executable 'lifegame'",
+            "name": "Debug executable 'local-html-help'",
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=lifegame",
-                    "--package=lifegame"
+                    "--bin=local-html-help",
+                    "--package=local-html-help"
                 ],
                 "filter": {
-                    "name": "lifegame",
+                    "name": "local-html-help",
                     "kind": "bin"
                 }
             },
@@ -36,16 +36,16 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug unit tests in executable 'lifegame'",
+            "name": "Debug unit tests in executable 'local-html-help'",
             "cargo": {
                 "args": [
                     "test",
                     "--no-run",
-                    "--bin=lifegame",
-                    "--package=lifegame"
+                    "--bin=local-html-help",
+                    "--package=local-html-help"
                 ],
                 "filter": {
-                    "name": "lifegame",
+                    "name": "local-html-help",
                     "kind": "bin"
                 }
             },
