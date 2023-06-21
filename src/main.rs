@@ -4,5 +4,5 @@ mod entry;
 mod project;
 
 fn main() {
-    entry::work();
+    entry::run();
 }

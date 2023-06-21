@@ -2,7 +2,7 @@ use crate::project::output_setting::OutputSetting;
 use crate::project::project_options::ProjectOptions;
 use crate::project::input_setting::InputSetting;
 
-pub fn work() {
+fn work() {
     let options = ProjectOptions {
         input: InputSetting {
             directory: String::from("X:\\lhh\\project"),
@@ -18,4 +18,8 @@ pub fn work() {
 
     let deserialized: ProjectOptions = serde_json::from_str(serialized.as_str()).unwrap();
     println!("deserialized: {:?}", deserialized);
+}
+
+pub fn run() {
+    work();
 }
