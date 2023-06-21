@@ -4,7 +4,11 @@
 			"path": "."
 		}
 	],
-	"settings": {},
+	"settings": {
+		"rust-analyzer.linkedProjects": [
+			".\\Cargo.toml"
+		]
+	},
 	"extensions": {
 		"recommendations": [
 			"vadimcn.vscode-lldb",
