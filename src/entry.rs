@@ -1,8 +1,8 @@
+use crate::project::input_setting::InputSetting;
 use crate::project::output_setting::OutputSetting;
 use crate::project::project_options::ProjectOptions;
-use crate::project::input_setting::InputSetting;
 
-fn work() {
+fn get_project_options() -> ProjectOptions {
     let options = ProjectOptions {
         input: InputSetting {
             directory: String::from("X:\\lhh\\project"),
@@ -11,6 +11,13 @@ fn work() {
             directory: String::from("X:\\lhh\\export"),
         },
     };
+
+    return options;
+}
+
+fn work() {
+    let options = get_project_options();
+    
     println!("options: {:?}", options);
 
     let serialized = serde_json::to_string(&options).unwrap();
