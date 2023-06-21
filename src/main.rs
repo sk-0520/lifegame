@@ -1,13 +1,19 @@
 extern crate serde_json;
 
-mod project_options;
+mod project;
 
-use project_options::project_options::ProjectOptions;
+use project::output_setting::OutputSetting;
+use project::project_options::ProjectOptions;
+use project::input_setting::InputSetting;
 
 fn main() {
     let options = ProjectOptions {
-        project_directory: String::from("X:\\lhp\\project"),
-        output_directory: String::from("X:\\lhp\\export"),
+        input: InputSetting {
+            directory: String::from("X:\\lhp\\project"),
+        },
+        output: OutputSetting {
+            directory: String::from("X:\\lhp\\export"),
+        },
     };
     println!("options: {:?}", options);
 
@@ -16,5 +22,4 @@ fn main() {
 
     let deserialized: ProjectOptions = serde_json::from_str(serialized.as_str()).unwrap();
     println!("deserialized: {:?}", deserialized);
-
 }
