@@ -12,6 +12,12 @@ fn get_project_options() -> ProjectOptions {
         },
     };
 
+    let serialized = serde_json::to_string(&options).unwrap();
+    println!("serialized: {}", serialized);
+
+    let deserialized: ProjectOptions = serde_json::from_str(serialized.as_str()).unwrap();
+    println!("deserialized: {:?}", deserialized);
+
     return options;
 }
 
@@ -19,12 +25,6 @@ fn work() {
     let options = get_project_options();
     
     println!("options: {:?}", options);
-
-    let serialized = serde_json::to_string(&options).unwrap();
-    println!("serialized: {}", serialized);
-
-    let deserialized: ProjectOptions = serde_json::from_str(serialized.as_str()).unwrap();
-    println!("deserialized: {:?}", deserialized);
 }
 
 pub fn run() {
